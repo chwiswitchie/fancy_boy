@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import IconButton from '/Users/jennifer/Desktop/chwis_witchie/app/my-app/src/components/icon-button/IconButton.js';
+import IconButton from '../icon-button/IconButton.js';
 
 class IconButtonPage extends Component {
   

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import LinkButton from '/Users/jennifer/Desktop/chwis_witchie/app/my-app/src/components/link-button/LinkButton.js';
+import LinkButton from '../link-button/LinkButton.js';
 
 class LinkButtonPage extends Component {
   

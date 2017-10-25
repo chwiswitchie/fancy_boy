@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Checkbox from '/Users/jennifer/Desktop/chwis_witchie/app/my-app/src/components/checkbox/Checkbox.js';
+import Checkbox from '../checkbox/Checkbox.js';
 
 class CheckboxPage extends Component {
   state = {

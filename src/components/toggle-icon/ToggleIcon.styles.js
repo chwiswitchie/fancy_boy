@@ -19,7 +19,9 @@ export default StyleSheet.create({
     },
   },
   isActive: {
-    color: colors.accent,
-    ':hover': 'none',
+    color: colors.secondary,
+    ':hover': {
+      color: colors.secondaryShade,
+    },
   },
 });

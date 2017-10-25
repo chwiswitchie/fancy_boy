@@ -3,10 +3,11 @@ import colors from '../../lib/styles/colors.js';
 
 export default StyleSheet.create({
   link: {
-    color: colors.accent,
-    fontWeight: 'lighter',
+    color: colors.secondary,
+    fontWeight: 600,
+    textDecoration: 'none',
     ':hover': {
-      fontWeight: 'normal',
+      textDecoration: 'underline',
     },
   },
   disabled: {

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { css } from 'aphrodite';
 import styles from './ToggleIcon.styles';
-import Icon from '/Users/jennifer/Desktop/chwis_witchie/app/my-app/src/components/icon/Icon.js';
+import Icon from '../icon/Icon';
 
 class ToggleIcon extends Component {
   static propTypes = {

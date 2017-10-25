@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import ToggleIcon from '/Users/jennifer/Desktop/chwis_witchie/app/my-app/src/components/toggle-icon/ToggleIcon.js';
+import ToggleIcon from '../toggle-icon/ToggleIcon.js';
 
 class ToggleIconPage extends Component {
   

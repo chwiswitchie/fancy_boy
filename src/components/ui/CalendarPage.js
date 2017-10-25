@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import Calendar from '/Users/jennifer/Desktop/chwis_witchie/app/my-app/src/components/calendar/Calendar.js';
 import * as moment from 'moment';
+import Calendar from '../calendar/Calendar.js';
 
 class CalendarPage extends Component {
 

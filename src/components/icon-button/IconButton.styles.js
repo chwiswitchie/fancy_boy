@@ -19,11 +19,26 @@ export default StyleSheet.create({
   },
   primary: {
     backgroundColor: colors.primary,
+    ':hover': {
+      backgroundColor: colors.primaryShade,
+    },
   },
   secondary: {
-    backgroundColor: colors.accent,
+    backgroundColor: colors.secondary,
+    ':hover': {
+      backgroundColor: colors.secondaryShade,
+    },
   },
   tertiary: {
-    backgroundColor: colors.accentSecondary,
+    backgroundColor: colors.tertiary,
+    ':hover': {
+      backgroundColor: colors.tertiaryShade,
+    },
+  },
+  quarternary: {
+    backgroundColor: colors.quarternary,
+    ':hover': {
+      backgroundColor: colors.quarternaryShade,
+    },
   },
 });

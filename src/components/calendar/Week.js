@@ -8,20 +8,22 @@ import Day from './Day';
 class Week extends Component {
 
   static propTypes = {
-    month: PropTypes.instanceOf(moment).isRequired,
-    selected: PropTypes.instanceOf(moment).isRequired,
+    month: PropTypes.instanceOf(moment), //.isRequired,
+    select: PropTypes.func, //.isRequired,
+    selected: PropTypes.instanceOf(moment), //.isRequired,
     // daysWithPendingEvents: PropTypes.arrayOf(PropTypes.number),
     // daysWithSchedEvents: PropTypes.arrayOf(PropTypes.number),
-    select: PropTypes.func.isRequired,
+    pastIsReadOnly: PropTypes.bool,
   };
 
   static defaultProps = {
     daysWithPendingEvents:[],
     daysWithSchedEvents:[],
+    pastIsReadOnly: false,
   };
 
   render() {
-    const { month, selected, select } = this.props;
+    const { pastIsReadOnly, month, selected, select } = this.props;
     let { date } = this.props;
     let days = [];
 
@@ -36,9 +38,11 @@ class Week extends Component {
 
       days.push(
         <Day
+          key={date.toString()}
           day={day}
           daysWithPendingEvents={this.props.daysWithPendingEvents}
           daysWithSchedEvents={this.props.daysWithSchedEvents}
+          pastIsReadOnly={this.props.pastIsReadOnly}
           selected={selected}
           select={select}
         />
@@ -49,7 +53,13 @@ class Week extends Component {
     }
 
     return (
-      <div key={date._d.toString()} className={css(styles.week)}>
+      <div
+        key={date._d.toString()}
+        className={css(
+          styles.week,
+          !pastIsReadOnly && styles.weekSpacing,
+        )}
+      >
         {days}
       </div>
     );

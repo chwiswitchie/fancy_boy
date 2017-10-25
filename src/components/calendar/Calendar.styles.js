@@ -9,8 +9,11 @@ export default StyleSheet.create({
     fontWeight: 'bold',
     height: 40,
     justifyContent: 'center',
-    margin: 5,
     width: '100%',
+  },
+  calendar: {
+    width: '100%',
+    minWidth: 350,
   },
   header: {
     alignItems: 'center',
@@ -20,10 +23,25 @@ export default StyleSheet.create({
   },
   icon: {
     cursor: 'pointer',
+    color: colors.secondary,
+    ':hover': {
+      color: colors.secondaryShade,
+    },
   },
   week: {
     display: 'flex',
     fontSize: 15,
-    margin: 20,
+  },
+
+  // pastIsReadOnly styling
+
+  headerSpacing: {
+    margin: 15,
+  },
+  hidden: {
+    visibility: 'hidden',
+  },
+  weekSpacing: {
+    margin: 25,
   },
 });

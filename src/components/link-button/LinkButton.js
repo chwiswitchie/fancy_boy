@@ -5,8 +5,8 @@ import styles from './LinkButton.styles';
 
 class LinkButton extends Component {
   static propTypes = {
-    href: PropTypes.string.isRequired,
-    label: PropTypes.string.isRequired,
+    href: PropTypes.string, //.isRequired,
+    label: PropTypes.string, //.isRequired,
     disabled: PropTypes.bool,
   };
 

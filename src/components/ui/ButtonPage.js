@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Button from '/Users/jennifer/Desktop/chwis_witchie/app/my-app/src/components/button/Button.js';
+import Button from '../button/Button.js';
 
 class ButtonPage extends Component {
   

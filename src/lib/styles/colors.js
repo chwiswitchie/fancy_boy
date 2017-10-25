@@ -5,8 +5,15 @@ export default {
   lightGrey: '#d3d3d3',
 
   primary: '#008080', // teal
-  secondary: '#156767',
-  accent: '#802000',
-  accentSecondary: '#400080',
+  primaryShade: '#156767',
+  
+  secondary: '#802000',
+  secondaryShade: '#672915',
+  
+  tertiary: '#400080',
+  tertiaryShade: '#3e1567',
+
+  quarternary: '#806000',
+  quarternaryShade: '#675215',
 };
 

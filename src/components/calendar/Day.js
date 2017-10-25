@@ -14,19 +14,27 @@ class Day extends Component {
         isToday: PropTypes.bool,
         date: PropTypes.instanceOf(moment),
       }),
+    select: PropTypes.func.isRequired,
     selected: PropTypes.instanceOf(moment).isRequired,
     // daysWithPendingEvents: PropTypes.arrayOf(PropTypes.number),
     // daysWithSchedEvents: PropTypes.arrayOf(PropTypes.number),
-    select: PropTypes.func.isRequired,
+    pastIsReadOnly: PropTypes.bool,
   };
 
   static defaultProps = {
     daysWithPendingEvents:[],
     daysWithSchedEvents:[],
+    pastIsReadOnly: false,
   };
 
+  onClick = (day, pastDate) => {
+    if (pastDate && this.props.pastIsReadOnly) return;
+
+    this.props.select(day);
+  }
+
   render() {
-    const { day, select, selected } = this.props;
+    const { day, pastIsReadOnly, selected } = this.props;
     const { date, isCurrentMonth, isToday, number } = day;
     const selectedDay = moment(date._d).isSame(selected._d);
     const pastDate = moment(date._d).diff(new Date(), 'days') < 0;
@@ -34,13 +42,14 @@ class Day extends Component {
     const hasSchedEvent = this.props.daysWithSchedEvents.includes(number);
 
     return (
-      <div 
+      <div
         key={number} 
-        onClick={() => select(day)}
+        onClick={() => this.onClick(day, pastDate)}
         className={css(
           styles.day,
           isToday && styles.isToday,
           pastDate && styles.pastDate,
+          pastDate && pastIsReadOnly && styles.pastIsReadOnly,
         )}
       >
         <div className={css(

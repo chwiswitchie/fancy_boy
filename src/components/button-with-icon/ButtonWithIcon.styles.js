@@ -6,14 +6,15 @@ export default StyleSheet.create({
     cursor: 'pointer',
     fontSize: 16,
     margin: 5,
-    backgroundColor: colors.accent,
+    backgroundColor: colors.secondary,
     color: colors.white,
-    border: `1px solid ${colors.accent}`,
+    border: `1px solid ${colors.secondary}`,
     borderRadius: 3,
     padding: '8px 16px',
+    whiteSpace: 'nowrap',
     ':hover': {
-      backgroundColor: colors.accent,
-      border: `1px solid ${colors.accent}`,
+      backgroundColor: colors.secondaryShade,
+      border: `1px solid ${colors.secondaryShade}`,
     },
   },
   disabled: {
@@ -22,7 +23,7 @@ export default StyleSheet.create({
     ':hover': 'none',
   },
   label: {
-    marginLeft: 5,
+    marginLeft: 10,
   },
 
 });

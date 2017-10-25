@@ -10,8 +10,8 @@ export default StyleSheet.create({
     width: 16,
   },
   checked: {
-    backgroundColor: colors.accent,
-    border: `1px solid ${colors.accent}`,
+    backgroundColor: colors.secondary,
+    border: `1px solid ${colors.secondary}`,
     color: colors.white,
     fontSize: 14,
     textAlign: 'center',

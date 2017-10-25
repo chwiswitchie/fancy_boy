@@ -41,4 +41,7 @@ export default StyleSheet.create({
     color: colors.white,
     padding: 5,
   },
+  pastIsReadOnly: {
+    cursor: 'not-allowed',
+  },
 });

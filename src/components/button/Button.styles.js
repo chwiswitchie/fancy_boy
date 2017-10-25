@@ -7,6 +7,7 @@ export default StyleSheet.create({
     // height: 36,
     fontSize: 16,
     margin: 5,
+    whiteSpace: 'nowrap',
   },
   disabled: {
     opacity: 0.5,
@@ -21,8 +22,8 @@ export default StyleSheet.create({
     borderRadius: 3,
     padding: '8px 16px',
     ':hover': {
-      backgroundColor: colors.secondary,
-      border: `1px solid ${colors.secondary}`,
+      backgroundColor: colors.primaryShade,
+      border: `1px solid ${colors.primaryShade}`,
     },
   },
   secondary: {
@@ -42,7 +43,7 @@ export default StyleSheet.create({
     color: colors.primary,
     padding: '8px 16px',
     ':hover': {
-      color: colors.secondary,
+      color: colors.primaryShade,
       textDecoration: 'underline',
     },
   },

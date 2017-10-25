@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 class Icon extends Component {
   static propTypes = {
-    icon: PropTypes.string.isRequired,
+    icon: PropTypes.string, //.isRequired,
   };
 
   static defaultProps = {};

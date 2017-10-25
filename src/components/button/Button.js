@@ -5,8 +5,8 @@ import styles from './Button.styles';
 
 class Button extends Component {
   static propTypes = {
-    label: PropTypes.string.isRequired,
-    onClick: PropTypes.func.isRequired,
+    label: PropTypes.string, //.isRequired,
+    onClick: PropTypes.func, //.isRequired,
     type: PropTypes.oneOf(['primary', 'secondary', 'text']),
     disabled: PropTypes.bool,
   };

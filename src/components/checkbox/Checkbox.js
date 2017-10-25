@@ -2,13 +2,13 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { css } from 'aphrodite';
 import styles from './Checkbox.styles';
-import Icon from '/Users/jennifer/Desktop/chwis_witchie/app/my-app/src/components/icon/Icon.js';
+import Icon from '../icon/Icon';
 
 class Checkbox extends Component {
   static propTypes = {
-    checked: PropTypes.bool.isRequired,
-    label: PropTypes.string.isRequired,
-    onClick: PropTypes.func.isRequired,
+    checked: PropTypes.bool, //.isRequired,
+    label: PropTypes.string, //.isRequired,
+    onClick: PropTypes.func, //.isRequired,
     disabled: PropTypes.bool,
   };
 

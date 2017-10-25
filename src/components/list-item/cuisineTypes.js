@@ -1,0 +1,16 @@
+export default [
+  'American',
+  'Asian',
+  'BBQ',
+  'Cajun',
+  'Dessert',
+  'Fusion',
+  'Korean',
+  'Mediterranean',
+  'Mexican',
+  'Seafood',
+  'Tex-Mex',
+  'Thai',
+  'Vegan',
+  'Vegetarian',
+];

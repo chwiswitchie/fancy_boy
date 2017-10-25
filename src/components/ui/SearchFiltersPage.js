@@ -1,22 +1,14 @@
 import React, { Component } from 'react';
-import Filter from '/Users/jennifer/Desktop/chwis_witchie/app/my-app/src/components/filter/Filter.js';
+import SearchFilters from '../search-filters/SearchFilters.js';
+import dummyFilters from '../search-filters/dummyFilters.js';
 
-const cuisineOptions = [
-  'American',
-  'Chinese',
-  'Mexican',
-  'Indian',
-  'Vegetarian / Vegan',
-];
-
-const priceOptions = ['$', '$$', '$$$'];
-
-class FilterPage extends Component {
+class SearchFiltersPage extends Component {
 
   state = {
     cuisineSelections: ['American', 'Indian'],
     priceSelections: ['$'],
   };
+
 
   onClickCuisine = (e) => {
     const option = e.currentTarget.id;
@@ -53,25 +45,18 @@ class FilterPage extends Component {
   render() {
     return (
       <div>
-        <h2>Filter</h2>
-        <Filter
-          icon={'spoon'}
-          onClick={this.onClickCuisine}
-          options={cuisineOptions}
-          selections={this.state.cuisineSelections}
-          title={'Cuisine'}
-        />
-
-        <Filter
-          icon={'money'}
-          onClick={this.onClickPrice}
-          options={priceOptions}
-          selections={this.state.priceSelections}
-          title={'price'}
-        />
-      </div>    
+        <h1>SearchFilters</h1>
+          <SearchFilters
+            cuisineOptions={dummyFilters.cuisines}
+            priceOptions={dummyFilters.price}
+            onClickPrice={this.onClickPrice}
+            onClickCuisine={this.onClickCuisine}
+            priceSelections={this.state.priceSelections}
+            cuisineSelections={this.state.cuisineSelections}
+          />
+      </div>
     );
   }
 }
 
-export default FilterPage;
+export default SearchFiltersPage;
